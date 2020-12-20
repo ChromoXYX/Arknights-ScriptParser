@@ -120,14 +120,26 @@ namespace arksp {
 				if (arksp::Manager::getValueByPropName("xscale", prop) != "") {
 					setEnv("bg_xscale", arksp::Manager::getValueByPropName("xscale", prop), current);
 				}
+				else {
+					setEnv("bg_xscale", "0", current);
+				}
 				if (arksp::Manager::getValueByPropName("yscale", prop) != "") {
 					setEnv("bg_yscale", arksp::Manager::getValueByPropName("yscale", prop), current);
+				}
+				else {
+					setEnv("bg_yscale", "0", current);
 				}
 				if (arksp::Manager::getValueByPropName("y", prop) != "") {
 					setEnv("bg_y", arksp::Manager::getValueByPropName("y", prop), current);
 				}
+				else {
+					setEnv("bg_y", "0", current);
+				}
 				if (arksp::Manager::getValueByPropName("x", prop) != "") {
 					setEnv("bg_x", arksp::Manager::getValueByPropName("x", prop), current);
+				}
+				else {
+					setEnv("bg_x", "0", current);
 				}
 			}
 			else if (func == "backgroundtween") {
@@ -228,18 +240,30 @@ namespace arksp {
 			}
 			else if (func == "image") {
 				setEnv(func, arksp::Manager::getValueByPropName("image", prop), current);
-				if (arksp::Manager::getValueByPropName("xscale", prop) != "") {
+				if (arksp::Manager::getValueByPropName("xScale", prop) != "") {
 					setEnv("image_xScale", arksp::Manager::getValueByPropName("xScale", prop), current);
 				}
-				if (arksp::Manager::getValueByPropName("yscale", prop) != "") {
+				else {
+					setEnv("image_xScale", "0", current);
+				}
+				if (arksp::Manager::getValueByPropName("yScale", prop) != "") {
 					setEnv("image_yScale", arksp::Manager::getValueByPropName("yScale", prop), current);
+				}
+				else {
+					setEnv("image_yScale", "0", current);
 				}
 				if (arksp::Manager::getValueByPropName("y", prop) != "") {
 					setEnv("image_y", arksp::Manager::getValueByPropName("y", prop), current);
 				}
+				else {
+					setEnv("image_y", "0", current);
+				}
 				if (arksp::Manager::getValueByPropName("x", prop) != "") {
 					setEnv("image_x", arksp::Manager::getValueByPropName("x", prop), current);
 				}
+				else {
+					setEnv("image_x", "0", current);
+				}				
 			}
 			else if (func == "imagetween") {
 				auto _yTo = arksp::Manager::getValueByPropName("yTo", prop);
