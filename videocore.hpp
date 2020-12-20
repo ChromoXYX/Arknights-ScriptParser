@@ -312,7 +312,22 @@ namespace arksp {
 		std::vector<EnvState> m_env;
 #ifdef ARKSP_CONTEXT
 		std::vector<Context> m_ctx;
+		auto begin() {
+			return m_ctx.begin();
+		}
+		auto end() {
+			return m_ctx.end();
+		}
 #endif
+#endif
+
+#ifndef ARKSP_CONTEXT
+		auto begin() {
+			return m_env.begin();
+		}
+		auto end() {
+			return m_env.end();
+		}
 #endif
 
 	private:
