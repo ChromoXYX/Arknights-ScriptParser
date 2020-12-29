@@ -2,6 +2,8 @@
 
 A header only C++ library to analysis raw story scripts of Arknights.
 
+***将会在2021年1月23日开始重构***
+
 一个用于解析明日方舟剧情原始脚本的纯头文件C++库。
 
 **视频合成部分暂未完成**
